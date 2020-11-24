@@ -1,0 +1,18 @@
+<resources>
+        <string name="app_name">FIT-X-Logger-Android</string>
+
+<!--        Buttons-->
+        <string name="add_BtnEmp">Add Employee</string>
+        <string name="list_BtnEmp">List Employees</string>
+        <string name="upd_BtnEmp">Update Employee</string>
+        <string name="del_BtnEmp">Delete Employee</string>
+<!--Employee attribute fields-->
+        <string name="hint_fName">First Name</string>
+        <string name="hint_sName">Last Name</string>
+        <string name="hint_dateOfB">Date Of Birth</string>
+        <string name="hint_email">Email</string>
+        <string name="hint_ssNumber">Social Security No.</string>
+        <string name="hint_nationality">Nationality</string>
+
+
+</resources>
