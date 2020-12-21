@@ -13,6 +13,7 @@
         <string name="hint_email">Email</string>
         <string name="hint_ssNumber">Social Security No.</string>
         <string name="hint_nationality">Nationality</string>
+        <string name="hint_jobTitle">Nationality</string>
 
 
 </resources>
