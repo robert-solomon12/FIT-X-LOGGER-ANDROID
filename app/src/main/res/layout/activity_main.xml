@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -40,7 +40,7 @@
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/fName"
+                    android:id="@+id/empfName"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_margin="8dp"
@@ -54,7 +54,7 @@
                     android:textSize="14sp" />
 
                 <EditText
-                    android:id="@+id/sName"
+                    android:id="@+id/empsName"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_margin="8dp"
@@ -68,7 +68,7 @@
                     android:textSize="14sp" />
 
                 <EditText
-                    android:id="@+id/dateOfB"
+                    android:id="@+id/empDateOfB"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_margin="8dp"
@@ -82,7 +82,7 @@
                     android:textSize="14sp" />
 
                 <EditText
-                    android:id="@+id/email"
+                    android:id="@+id/empEmail"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_margin="8dp"
@@ -96,7 +96,7 @@
                     android:textSize="14sp" />
 
                 <EditText
-                    android:id="@+id/ssNumber"
+                    android:id="@+id/empSsNumber"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_margin="8dp"
@@ -110,7 +110,7 @@
                     android:textSize="14sp" />
 
                 <EditText
-                    android:id="@+id/nationality"
+                    android:id="@+id/empNationality"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_margin="8dp"
@@ -124,7 +124,7 @@
                     android:textSize="14sp" />
 
                 <EditText
-                    android:id="@+id/jobTitle"
+                    android:id="@+id/empJobTitle"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_margin="8dp"
@@ -191,9 +191,6 @@
                     android:textSize="16sp" />
 
             </LinearLayout>
-
-
-
         </ScrollView>
     </RelativeLayout>
 

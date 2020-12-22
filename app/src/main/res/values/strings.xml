@@ -6,6 +6,11 @@
         <string name="list_BtnEmp">List Employees</string>
         <string name="upd_BtnEmp">Update Employee</string>
         <string name="del_BtnEmp">Delete Employee</string>
+
+                <!--            Add Icon-->
+        <string name="addEmployeeDataIcon">Add</string>
+        <string name="canelEmployeeDataIcon">Add</string>
+
 <!--Employee attribute fields-->
         <string name="hint_fName">First Name</string>
         <string name="hint_sName">Last Name</string>
