@@ -20,6 +20,13 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        /*
+         explicitly enabling the toolbar here upon calling the onCreate method for presenting the cancelling button here
+         */
+        toolbarAdd.title = title
+        setSupportActionBar(toolbarAdd)
+
         info("FIT-X-LOGGER App Activity started..")
 
         app = application as MainApp
@@ -46,7 +53,7 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
             if (empData.fName.isNotEmpty() && empData.sName.isNotEmpty() && empData.dateOfB.isNotEmpty()
                 && empData.ssNumber.isNotEmpty() && empData.email.isNotEmpty() && empData.nationality.isNotEmpty() && empData.jobTitle.isNotEmpty()) {
                 app.empDatas.create(empData.copy())
-                info("Add Button Pressed: ${empData}")
+                info("Add Button Pressed: $empfName")
                 setResult(AppCompatActivity.RESULT_OK)
                 finish()
             } else {
@@ -55,6 +62,8 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
         }
     }
 
+
+    //inflating the menu after cancel button is enabled
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_employeedata, menu)
         return super.onCreateOptionsMenu(menu)
