@@ -10,7 +10,7 @@ data class EmployeeModel (
     var fName: String = "",
     var sName: String = "",
     var dateOfB: String = "",
-    var ssNumber: String = "",
     var email: String = "",
+    var ssNumber: String = "",
     var nationality: String = "",
     var jobTitle: String = "") : Parcelable

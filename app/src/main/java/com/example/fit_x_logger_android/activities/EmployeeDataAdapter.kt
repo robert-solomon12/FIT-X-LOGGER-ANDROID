@@ -6,15 +6,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fit_x_logger_android.R
 import com.example.fit_x_logger_android.models.EmployeeModel
-import kotlinx.android.synthetic.main.activity_main.view.*
-import kotlinx.android.synthetic.main.activity_main.view.empJobTitle
 import kotlinx.android.synthetic.main.card_employeedata.view.*
 
 interface EmployeeDataListener {
     fun onEmployeeDataClick(empData: EmployeeModel)
 }
 
-    class EmployeeDataAdapter(private var empDatas: List<EmployeeModel>,
+class EmployeeDataAdapter constructor(private var empDatas: List<EmployeeModel>,
                               private val listener: EmployeeDataListener) : RecyclerView.Adapter<EmployeeDataAdapter.MainHolder>() {
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainHolder {
@@ -31,9 +29,10 @@ interface EmployeeDataListener {
         class MainHolder constructor(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
             fun bind(empData: EmployeeModel, listener: EmployeeDataListener) {
-                itemView.tvJobTitle.text = empData.jobTitle
-                itemView.tvFname.text = empData.fName
-                itemView.tvSname.text = empData.sName
+                itemView.jobTitleTv.text = empData.jobTitle
+               // itemView.nationalityTv.text = empData.nationality
+                itemView.fNameTv.text = empData.fName
+                itemView.sNameTv.text = empData.sName
                 itemView.setOnClickListener { listener.onEmployeeDataClick(empData) }
             }
         }

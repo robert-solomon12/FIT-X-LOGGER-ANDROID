@@ -12,23 +12,23 @@
         android:padding="16dp">
 
         <TextView
-            android:id="@+id/tvJobTitle"
+            android:id="@+id/jobTitleTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:textSize="30sp" />
 
         <TextView
-            android:id="@+id/tvFname"
+            android:id="@+id/fNameTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tvJobTitle" />
+            android:layout_below="@id/jobTitleTv"/>
 
         <TextView
-            android:id="@+id/tvSname"
+            android:id="@+id/sNameTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tvFname" />
+            android:layout_below="@id/fNameTv"/>
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

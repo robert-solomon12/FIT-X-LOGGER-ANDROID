@@ -11,6 +11,8 @@ import kotlinx.android.synthetic.main.activity_mainlist.*
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.startActivityForResult
 
+
+// Declaring the implemented interface in this class
 class EmployeeListActivity : AppCompatActivity(), EmployeeDataListener {
 
    private lateinit var app: MainApp
@@ -41,6 +43,6 @@ class EmployeeListActivity : AppCompatActivity(), EmployeeDataListener {
     }
 
     override fun onEmployeeDataClick(empData: EmployeeModel) {
-        startActivityForResult(intentFor<MainActivity>().putExtra("EmployeeData_edit", empData), AppCompatActivity.RESULT_OK)
+        startActivityForResult(intentFor<MainActivity>().putExtra("Employee_data_edit", empData), AppCompatActivity.RESULT_OK)
     }
 }
