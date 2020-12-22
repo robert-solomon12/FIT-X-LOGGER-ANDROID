@@ -24,5 +24,11 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tvJobTitle" />
 
+        <TextView
+            android:id="@+id/tvSname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvFname" />
+
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

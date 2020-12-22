@@ -18,12 +18,11 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
     lateinit var app: MainApp
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
         info("FIT-X-LOGGER App Activity started..")
 
         app = application as MainApp
-
 
         if (intent.hasExtra("Employee_edit")) {
             empData = intent.extras?.getParcelable<EmployeeModel>("Employee_edit")!!
@@ -34,8 +33,8 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
             empSsNumber.setText(empData.ssNumber)
             empNationality.setText(empData.nationality)
             empJobTitle.setText(empData.jobTitle)
-
         }
+
         btnAdd.setOnClickListener() {
             empData.fName = empfName.text.toString()
             empData.sName = empsName.text.toString()

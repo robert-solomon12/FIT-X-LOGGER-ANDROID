@@ -17,10 +17,9 @@ class EmployeeListActivity : AppCompatActivity(), EmployeeDataListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        app = application as MainApp
         setContentView(R.layout.activity_mainlist)
 
-
+        app = application as MainApp
         toolbar.title = title
         setSupportActionBar(toolbar)
 

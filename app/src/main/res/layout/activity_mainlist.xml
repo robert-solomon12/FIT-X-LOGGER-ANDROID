@@ -4,8 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    tools:context="com.example.fit_x_logger_android.activies.EmployeeListActivity">
+    android:layout_height="match_parent"
+    tools:context="com.example.fit_x_logger_android.activities.EmployeeListActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -13,8 +13,8 @@
         android:background="@color/colorAccent"
         android:fitsSystemWindows="true"
         app:elevation="0dip"
-        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        tools:ignore="MissingConstraints">
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
