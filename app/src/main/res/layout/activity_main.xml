@@ -41,26 +41,12 @@
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/empfName"
+                    android:id="@+id/empName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:autofillHints=""
-                    android:hint="@string/hint_fName"
-                    android:inputType="text"
-                    android:maxLength="20"
-                    android:maxLines="1"
-                    android:padding="8dp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="14sp" />
-
-                <EditText
-                    android:id="@+id/empsName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:autofillHints=""
-                    android:hint="@string/hint_sName"
+                    android:hint="@string/hint_Name"
                     android:inputType="text"
                     android:maxLength="20"
                     android:maxLines="1"
@@ -89,6 +75,20 @@
                     android:layout_margin="8dp"
                     android:autofillHints=""
                     android:hint="@string/hint_email"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/empGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:autofillHints=""
+                    android:hint="@string/hint_gender"
                     android:inputType="text"
                     android:maxLength="25"
                     android:maxLines="1"
@@ -136,6 +136,25 @@
                     android:padding="8dp"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="14sp" />
+
+
+                <Button
+                    android:id="@+id/chooseImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:background="@color/colorAccent"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:text="@string/addImage_Btn"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"/>
+
+                <ImageView
+                    android:id="@+id/empDataImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/ic_launcher"/>
 
 
                 <Button

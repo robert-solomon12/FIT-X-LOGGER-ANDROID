@@ -1,5 +1,6 @@
 package com.example.fit_x_logger_android.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -11,11 +12,15 @@ import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
 import org.jetbrains.anko.toast
+import readImage
+import readImageFromPath
+import showImagePicker
 
 class MainActivity : AppCompatActivity(), AnkoLogger {
 
     var empData = EmployeeModel()
     lateinit var app: MainApp
+    val IMAGE_REQUEST = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,38 +33,48 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
         info("FIT-X-LOGGER App Activity started..")
 
         app = application as MainApp
+        var edit = false
 
         if (intent.hasExtra("Employee_data_edit")) {
+            edit = true
             empData = intent.extras?.getParcelable<EmployeeModel>("Employee_data_edit")!!
-            empfName.setText(empData.fName)
-            empsName.setText(empData.sName)
+            empName.setText(empData.name)
             empDateOfB.setText(empData.dateOfB)
             empEmail.setText(empData.email)
+            empGender.setText(empData.gender)
             empSsNumber.setText(empData.ssNumber)
             empNationality.setText(empData.nationality)
             empJobTitle.setText(empData.jobTitle)
+            empDataImage.setImageBitmap(readImageFromPath(this, empData.profilePic))
+            btnAdd.setText(R.string.save_Btn)
         }
 
         btnAdd.setOnClickListener() {
-            empData.fName = empfName.text.toString()
-            empData.sName = empsName.text.toString()
+            empData.name = empName.text.toString()
             empData.dateOfB = empDateOfB.text.toString()
             empData.email = empEmail.text.toString()
+            empData.gender = empGender.text.toString()
             empData.ssNumber = empSsNumber.text.toString()
             empData.nationality = empNationality.text.toString()
             empData.jobTitle = empJobTitle.text.toString()
-            if (empData.fName.isNotEmpty()) {
-                app.empDatas.create(empData.copy())
-                info("Add Button Pressed: $empfName")
-                setResult(AppCompatActivity.RESULT_OK)
-                finish()
+            if (empData.name.isEmpty()) {
+                toast(R.string.promptInvalid_Emp)
             } else {
-                toast("Please Enter valid Employee Data")
+                if (edit) {
+                    app.empDatas.update(empData.copy())
+                } else {
+                    app.empDatas.create(empData.copy())
+                }
             }
+            toast(R.string.promptValid_Emp)
+            setResult(AppCompatActivity.RESULT_OK)
+            finish()
+        }
+            //event handler for Image
+        chooseImage.setOnClickListener {
+            showImagePicker(this, IMAGE_REQUEST)
         }
     }
-
-
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_employeedata, menu)
@@ -75,5 +90,17 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
             }
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        when (requestCode) {
+            IMAGE_REQUEST -> {
+                if (data != null) {
+                    empData.profilePic = data.getData().toString()
+                    empDataImage.setImageBitmap(readImage(this, resultCode, data))
+                }
+            }
+        }
     }
 }

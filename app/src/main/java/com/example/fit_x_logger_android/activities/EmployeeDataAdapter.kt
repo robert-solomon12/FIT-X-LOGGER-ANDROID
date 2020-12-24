@@ -13,7 +13,7 @@ interface EmployeeDataListener {
 }
 
 class EmployeeDataAdapter constructor(private var empDatas: List<EmployeeModel>,
-                              private val listener: EmployeeDataListener) : RecyclerView.Adapter<EmployeeDataAdapter.MainHolder>() {
+                                      private val listener: EmployeeDataListener) : RecyclerView.Adapter<EmployeeDataAdapter.MainHolder>() {
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainHolder {
             return MainHolder(LayoutInflater.from(parent.context).inflate(R.layout.card_employeedata, parent, false))
@@ -29,10 +29,15 @@ class EmployeeDataAdapter constructor(private var empDatas: List<EmployeeModel>,
         class MainHolder constructor(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
             fun bind(empData: EmployeeModel, listener: EmployeeDataListener) {
+                itemView.nameTv.text = empData.name
+                itemView.dateofBTv.text = empData.dateOfB
+                itemView.emailTv.text = empData.email
+                itemView.genderTv.text = empData.gender
+                itemView.ssNumberTv.text = empData.ssNumber
+                itemView.nationalityTv.text = empData.nationality
                 itemView.jobTitleTv.text = empData.jobTitle
-               // itemView.nationalityTv.text = empData.nationality
-                itemView.fNameTv.text = empData.fName
-                itemView.sNameTv.text = empData.sName
+
+
                 itemView.setOnClickListener { listener.onEmployeeDataClick(empData) }
             }
         }

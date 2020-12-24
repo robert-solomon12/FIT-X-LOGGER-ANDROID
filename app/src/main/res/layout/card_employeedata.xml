@@ -12,23 +12,48 @@
         android:padding="16dp">
 
         <TextView
-            android:id="@+id/jobTitleTv"
+            android:id="@+id/nameTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:textSize="30sp" />
+            android:textSize="25sp"/>
 
         <TextView
-            android:id="@+id/fNameTv"
+            android:id="@+id/dateofBTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/jobTitleTv"/>
+            android:layout_below="@id/nameTv"/>
 
         <TextView
-            android:id="@+id/sNameTv"
+            android:id="@+id/emailTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/fNameTv"/>
+            android:layout_below="@id/dateofBTv"/>
+
+        <TextView
+            android:id="@+id/genderTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailTv"/>
+
+        <TextView
+            android:id="@+id/ssNumberTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/genderTv"/>
+
+        <TextView
+            android:id="@+id/nationalityTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ssNumberTv"/>
+
+        <TextView
+            android:id="@+id/jobTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nationalityTv"/>
 
     </RelativeLayout>
+
 </androidx.cardview.widget.CardView>

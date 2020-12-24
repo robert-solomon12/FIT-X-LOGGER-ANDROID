@@ -7,10 +7,11 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class EmployeeModel (
     var id: Int = 0,
-    var fName: String = "",
-    var sName: String = "",
+    var name: String = "",
     var dateOfB: String = "",
     var email: String = "",
+    var gender: String = "",
     var ssNumber: String = "",
     var nationality: String = "",
-    var jobTitle: String = "") : Parcelable
+    var jobTitle: String = "",
+    var profilePic: String = "") : Parcelable

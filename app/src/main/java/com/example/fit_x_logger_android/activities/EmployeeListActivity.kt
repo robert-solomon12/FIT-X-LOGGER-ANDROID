@@ -1,5 +1,6 @@
 package com.example.fit_x_logger_android.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import androidx.appcompat.app.AppCompatActivity
@@ -44,5 +45,10 @@ class EmployeeListActivity : AppCompatActivity(), EmployeeDataListener {
 
     override fun onEmployeeDataClick(empData: EmployeeModel) {
         startActivityForResult(intentFor<MainActivity>().putExtra("Employee_data_edit", empData), AppCompatActivity.RESULT_OK)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        recyclerView.adapter?.notifyDataSetChanged()
+        super.onActivityResult(requestCode, resultCode, data)
     }
 }
