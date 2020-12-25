@@ -5,9 +5,9 @@ import org.jetbrains.anko.info
 
 
 
-var lastId = 0
+var lastId = 0L
 
-internal fun getId(): Int {
+internal fun getId(): Long {
     return lastId++
 }
 
@@ -26,7 +26,7 @@ class EmployeeMemStore : EmployeeStore, AnkoLogger {
     }
 
     override fun update(empData: EmployeeModel) {
-        var foundEmpData: EmployeeModel? = empDatas.find { ed -> ed.id == empData.id }
+        var foundEmpData: EmployeeModel? = empDatas.find { p -> p.id == empData.id }
         if (foundEmpData != null) {
             foundEmpData.name = empData.name
             foundEmpData.dateOfB = empData.dateOfB
@@ -36,10 +36,11 @@ class EmployeeMemStore : EmployeeStore, AnkoLogger {
             foundEmpData.nationality = empData.nationality
             foundEmpData.jobTitle = empData.jobTitle
             foundEmpData.profilePic = empData.profilePic
+            logAll()
         }
     }
 
-    internal fun logAll() {
+   fun logAll() {
         empDatas.forEach { info("${it}") }
     }
 }

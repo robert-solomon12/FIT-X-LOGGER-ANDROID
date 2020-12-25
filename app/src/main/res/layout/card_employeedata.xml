@@ -11,47 +11,63 @@
         android:layout_height="wrap_content"
         android:padding="16dp">
 
+
+        <ImageView
+            android:id="@+id/imageIcon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="20dp"/>
+
         <TextView
             android:id="@+id/nameTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/imageIcon"
             android:textSize="25sp"/>
 
         <TextView
             android:id="@+id/dateofBTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imageIcon"
             android:layout_below="@id/nameTv"/>
 
         <TextView
             android:id="@+id/emailTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imageIcon"
             android:layout_below="@id/dateofBTv"/>
 
         <TextView
             android:id="@+id/genderTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imageIcon"
             android:layout_below="@id/emailTv"/>
 
         <TextView
             android:id="@+id/ssNumberTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imageIcon"
             android:layout_below="@id/genderTv"/>
 
         <TextView
             android:id="@+id/nationalityTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imageIcon"
             android:layout_below="@id/ssNumberTv"/>
 
         <TextView
             android:id="@+id/jobTitleTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imageIcon"
             android:layout_below="@id/nationalityTv"/>
 
     </RelativeLayout>

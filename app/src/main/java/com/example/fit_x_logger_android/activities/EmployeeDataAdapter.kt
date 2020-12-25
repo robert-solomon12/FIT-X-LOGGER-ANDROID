@@ -6,7 +6,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fit_x_logger_android.R
 import com.example.fit_x_logger_android.models.EmployeeModel
+import kotlinx.android.synthetic.main.activity_main.view.*
 import kotlinx.android.synthetic.main.card_employeedata.view.*
+import readImageFromPath
 
 interface EmployeeDataListener {
     fun onEmployeeDataClick(empData: EmployeeModel)
@@ -36,7 +38,7 @@ class EmployeeDataAdapter constructor(private var empDatas: List<EmployeeModel>,
                 itemView.ssNumberTv.text = empData.ssNumber
                 itemView.nationalityTv.text = empData.nationality
                 itemView.jobTitleTv.text = empData.jobTitle
-
+                itemView.imageIcon.setImageBitmap(readImageFromPath(itemView.context, empData.profilePic))
 
                 itemView.setOnClickListener { listener.onEmployeeDataClick(empData) }
             }

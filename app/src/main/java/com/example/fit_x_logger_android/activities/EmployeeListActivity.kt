@@ -16,7 +16,7 @@ import org.jetbrains.anko.startActivityForResult
 // Declaring the implemented interface in this class
 class EmployeeListActivity : AppCompatActivity(), EmployeeDataListener {
 
-   private lateinit var app: MainApp
+   lateinit var app: MainApp
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

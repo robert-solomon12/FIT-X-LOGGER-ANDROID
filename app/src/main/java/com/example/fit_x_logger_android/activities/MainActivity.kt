@@ -46,6 +46,9 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
             empNationality.setText(empData.nationality)
             empJobTitle.setText(empData.jobTitle)
             empDataImage.setImageBitmap(readImageFromPath(this, empData.profilePic))
+            if (empData.profilePic != null) {
+                chooseImage.setText(R.string.change_image)
+            }
             btnAdd.setText(R.string.save_Btn)
         }
 

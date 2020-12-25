@@ -6,7 +6,7 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class EmployeeModel (
-    var id: Int = 0,
+    var id: Long = 0,
     var name: String = "",
     var dateOfB: String = "",
     var email: String = "",
