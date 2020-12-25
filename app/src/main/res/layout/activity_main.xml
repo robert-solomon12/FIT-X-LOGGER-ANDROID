@@ -170,45 +170,6 @@
                     android:textColor="@color/colorPrimary"
                     android:textSize="16sp" />
 
-                <Button
-                    android:id="@+id/btnList"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:background="@color/colorAccent"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp"
-                    android:stateListAnimator="@null"
-                    android:text="@string/list_BtnEmp"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="16sp" />
-
-                <Button
-                    android:id="@+id/btnUpdate"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:background="@color/colorAccent"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp"
-                    android:stateListAnimator="@null"
-                    android:text="@string/upd_BtnEmp"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="16sp" />
-
-                <Button
-                    android:id="@+id/btnDelete"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:background="@color/colorAccent"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp"
-                    android:stateListAnimator="@null"
-                    android:text="@string/del_BtnEmp"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="16sp" />
-
             </LinearLayout>
         </ScrollView>
     </RelativeLayout>

@@ -3,9 +3,6 @@
 
                 <!--        Buttons     -->
         <string name="add_BtnEmp">Add Info</string>
-        <string name="list_BtnEmp">List Employees</string>
-        <string name="upd_BtnEmp">Update Employee</string>
-        <string name="del_BtnEmp">Delete Employee</string>
         <string name="save_Btn"> Save Info </string>
         <string name="addImage_Btn"> Add Profile Picture</string>
 

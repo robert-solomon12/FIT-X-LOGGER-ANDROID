@@ -85,6 +85,8 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
     }
 
 
+
+
     //inflating the menu after cancel button is enabled
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
