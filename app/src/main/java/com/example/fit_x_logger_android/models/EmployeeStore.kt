@@ -4,4 +4,5 @@ interface EmployeeStore {
     fun findAll(): List<EmployeeModel>
     fun create(empData: EmployeeModel)
     fun update(empData: EmployeeModel)
+    fun delete(empData: EmployeeModel)
 }

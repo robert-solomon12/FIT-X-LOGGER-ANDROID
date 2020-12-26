@@ -3,155 +3,155 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="8dp"
-    android:elevation="24dp">
+    android:layout_marginBottom="8dp">
+
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:padding="15dp">
 
 
         <ImageView
             android:id="@+id/imageIcon"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_weight="1"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginRight="25dp"/>
+            android:layout_marginRight="25dp"
+            android:layout_weight="1" />
 
 
-                <!--  Name Label  -->
-            <TextView
-                android:id="@+id/id_Name_lb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Name: "
-                android:layout_toRightOf="@+id/imageIcon"
-                android:textSize="15sp"/>
+        <!--  Name Label  -->
+        <TextView
+            android:id="@+id/id_Name_lb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imageIcon"
+            android:text="Name: "
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/nameTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/id_Name_lb"
-            android:textSize="15sp"/>
+            android:textSize="15sp" />
 
-                <!--Date of Birth Label-->
-            <TextView
-                android:id="@+id/id_DOB_lb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Date of Birth: "
-                android:layout_toRightOf="@+id/imageIcon"
-                android:layout_below="@id/id_Name_lb"
-                android:textSize="15sp"/>
+        <!--Date of Birth Label-->
+        <TextView
+            android:id="@+id/id_DOB_lb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_Name_lb"
+            android:layout_toRightOf="@+id/imageIcon"
+            android:text="Date of Birth: "
+            android:textSize="15sp" />
 
 
         <TextView
             android:id="@+id/dateofBTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/id_DOB_lb"
             android:layout_below="@id/nameTv"
-            android:textSize="15sp"/>
+            android:layout_toRightOf="@+id/id_DOB_lb"
+            android:textSize="15sp" />
 
 
-                    <!-- Email Label -->
-            <TextView
-                android:id="@+id/id_Email_lb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Email: "
-                android:layout_toRightOf="@+id/imageIcon"
-                android:layout_below="@id/id_DOB_lb"
-                android:textSize="15sp"/>
+        <!-- Email Label -->
+        <TextView
+            android:id="@+id/id_Email_lb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_DOB_lb"
+            android:layout_toRightOf="@+id/imageIcon"
+            android:text="Email: "
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/emailTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/imageIcon"
             android:layout_below="@id/dateofBTv"
-            android:textSize="15sp"/>
+            android:layout_toRightOf="@+id/id_Email_lb"
+            android:textSize="15sp" />
 
 
-                <!-- Gender Label -->
-            <TextView
-                android:id="@+id/id_Gender_lb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Gender: "
-                android:layout_toRightOf="@+id/imageIcon"
-                android:layout_below="@id/id_DOB_lb"
-                android:textSize="15sp"/>
+        <!-- Gender Label -->
+        <TextView
+            android:id="@+id/id_Gender_lb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_DOB_lb"
+            android:layout_toRightOf="@+id/imageIcon"
+            android:text="Gender: "
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/genderTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/id_Gender_lb"
             android:layout_below="@id/dateofBTv"
-            android:textSize="15sp"/>
+            android:layout_toRightOf="@id/id_Gender_lb"
+            android:textSize="15sp" />
 
 
-            <!-- Social Security Number Label -->
+        <!-- Social Security Number Label -->
 
-            <TextView
-                android:id="@+id/id_ssNumber_lb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Social Security No.: "
-                android:layout_toRightOf="@+id/imageIcon"
-                android:layout_below="@id/id_Gender_lb"
-                android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/id_ssNumber_lb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_Gender_lb"
+            android:layout_toRightOf="@+id/imageIcon"
+            android:text="Social Security No.: "
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/ssNumberTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/id_ssNumber_lb"
             android:layout_below="@id/genderTv"
-            android:textSize="15sp"/>
+            android:layout_toRightOf="@+id/id_ssNumber_lb"
+            android:textSize="15sp" />
 
 
-                <!--Nationality Label-->
-            <TextView
-                android:id="@+id/id_nationality_lb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nationality: "
-                android:layout_toRightOf="@+id/imageIcon"
-                android:layout_below="@id/id_ssNumber_lb"
-                android:textSize="15sp"/>
+        <!--Nationality Label-->
+        <TextView
+            android:id="@+id/id_nationality_lb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_ssNumber_lb"
+            android:layout_toRightOf="@+id/imageIcon"
+            android:text="Nationality: "
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/nationalityTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/id_nationality_lb"
             android:layout_below="@id/ssNumberTv"
-            android:textSize="15sp"/>
+            android:layout_toRightOf="@+id/id_nationality_lb"
+            android:textSize="15sp" />
 
 
-                    <!--Job Title Label-->
-            <TextView
-                android:id="@+id/id_JobTitle_lb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Job Title: "
-                android:layout_toRightOf="@+id/imageIcon"
-                android:layout_below="@id/id_nationality_lb"
-                android:textSize="15sp"/>
+        <!--Job Title Label-->
+        <TextView
+            android:id="@+id/id_JobTitle_lb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_nationality_lb"
+            android:layout_toRightOf="@+id/imageIcon"
+            android:text="Job Title: "
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/jobTitleTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/id_JobTitle_lb"
             android:layout_below="@id/nationalityTv"
-            android:textSize="15sp"/>
+            android:layout_toRightOf="@+id/id_JobTitle_lb"
+            android:textSize="15sp" />
 
     </RelativeLayout>
 

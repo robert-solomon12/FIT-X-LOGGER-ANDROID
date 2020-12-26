@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
     var empData = EmployeeModel()
     lateinit var app: MainApp
     val IMAGE_REQUEST = 1
+    var edit = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +35,7 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
         info("FIT-X-LOGGER App Activity started..")
 
         app = application as MainApp
-        var edit = false
+
 
         if (intent.hasExtra("Employee_data_edit")) {
             edit = true
@@ -82,6 +83,7 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_employeedata, menu)
+        if (edit && menu != null) menu.getItem(0).setVisible(true)
         return super.onCreateOptionsMenu(menu)
     }
 
@@ -91,6 +93,12 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
     //inflating the menu after cancel button is enabled
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
+
+            R.id.item_delete -> {
+                app.empDatas.delete(empData)
+                finish()
+            }
+
             R.id.item_cancel -> {
                 finish()
             }
@@ -105,6 +113,7 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
                 if (data != null) {
                     empData.profilePic = data.getData().toString()
                     empDataImage.setImageBitmap(readImage(this, resultCode, data))
+                    chooseImage.setText(R.string.change_image)
                 }
             }
         }

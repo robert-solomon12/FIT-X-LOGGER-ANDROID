@@ -38,6 +38,11 @@ class EmployeeMemStore : EmployeeStore, AnkoLogger {
         }
     }
 
+    override fun delete(empData: EmployeeModel) {
+        empDatas.remove(empData)
+    }
+
+
    fun logAll() {
         empDatas.forEach { info("${it}") }
     }

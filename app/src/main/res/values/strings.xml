@@ -25,6 +25,11 @@
         <string name="canelEmployeeDataIcon">Cancel</string>
 
 
+                        <!--    Delete Icon-->
+        <string name="deleteEmployeeDataIcon">Delete</string>
+
+
+
 
                 <!--Employee attribute string type fields-->
         <string name="hint_Name">Name</string>

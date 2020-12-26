@@ -57,6 +57,11 @@ class EmployeeJSONStore : EmployeeStore, AnkoLogger {
         serialize()
     }
 
+    override fun delete(empData: EmployeeModel) {
+        empDatas.remove(empData)
+        serialize()
+    }
+
     private fun serialize() {
         val jsonString = gsonBuilder.toJson(empDatas, listType)
         write(context, JSON_FILE, jsonString)
