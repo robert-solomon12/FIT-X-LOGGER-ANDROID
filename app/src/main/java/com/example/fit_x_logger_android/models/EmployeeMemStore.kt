@@ -3,8 +3,6 @@ package com.example.fit_x_logger_android.models
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
 
-
-
 var lastId = 0L
 
 internal fun getId(): Long {

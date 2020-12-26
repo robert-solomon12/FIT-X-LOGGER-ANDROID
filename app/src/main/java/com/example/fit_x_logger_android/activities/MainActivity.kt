@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         /*
          explicitly enabling the toolbar here upon calling the onCreate method for presenting the cancelling button here
          */
@@ -69,7 +70,7 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
                     app.empDatas.create(empData.copy())
                 }
             }
-            toast(R.string.promptValid_Emp)
+            info(R.string.promptValid_Emp)
             setResult(AppCompatActivity.RESULT_OK)
             finish()
         }

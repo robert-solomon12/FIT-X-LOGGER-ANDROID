@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fit_x_logger_android.R
 import com.example.fit_x_logger_android.models.EmployeeModel
-import kotlinx.android.synthetic.main.activity_main.view.*
 import kotlinx.android.synthetic.main.card_employeedata.view.*
 import readImageFromPath
 

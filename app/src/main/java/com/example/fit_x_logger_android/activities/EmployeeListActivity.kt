@@ -16,19 +16,29 @@ import org.jetbrains.anko.startActivityForResult
 // Declaring the implemented interface in this class
 class EmployeeListActivity : AppCompatActivity(), EmployeeDataListener {
 
-   lateinit var app: MainApp
+    lateinit var app: MainApp
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mainlist)
-
         app = application as MainApp
+
         toolbar.title = title
         setSupportActionBar(toolbar)
 
         val layoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = layoutManager
-        recyclerView.adapter = EmployeeDataAdapter(app.empDatas.findAll(), this)
+        //recyclerView.adapter = EmployeeDataAdapter(app.empDatas.findAll(), this)
+        loadEmployeeData()
+    }
+
+    private fun loadEmployeeData() {
+        showEmployeeData(app.empDatas.findAll())
+    }
+
+    fun showEmployeeData(empDatas: List<EmployeeModel>) {
+        recyclerView.adapter = EmployeeDataAdapter(empDatas, this)
+        recyclerView.adapter?.notifyDataSetChanged()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -48,7 +58,8 @@ class EmployeeListActivity : AppCompatActivity(), EmployeeDataListener {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        recyclerView.adapter?.notifyDataSetChanged()
+        loadEmployeeData()
+        //recyclerView.adapter?.notifyDataSetChanged()
         super.onActivityResult(requestCode, resultCode, data)
     }
 }
