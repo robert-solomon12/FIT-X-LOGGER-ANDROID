@@ -8,14 +8,14 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:padding="15dp">
 
 
         <ImageView
             android:id="@+id/imageIcon"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginRight="25dp"
@@ -78,11 +78,12 @@
 
 
         <!-- Gender Label -->
+
         <TextView
             android:id="@+id/id_Gender_lb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/id_DOB_lb"
+            android:layout_below="@id/id_Email_lb"
             android:layout_toRightOf="@+id/imageIcon"
             android:text="Gender: "
             android:textSize="15sp" />
@@ -91,7 +92,7 @@
             android:id="@+id/genderTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/dateofBTv"
+            android:layout_below="@id/emailTv"
             android:layout_toRightOf="@id/id_Gender_lb"
             android:textSize="15sp" />
 
@@ -117,6 +118,7 @@
 
 
         <!--Nationality Label-->
+
         <TextView
             android:id="@+id/id_nationality_lb"
             android:layout_width="wrap_content"
@@ -136,6 +138,7 @@
 
 
         <!--Job Title Label-->
+
         <TextView
             android:id="@+id/id_JobTitle_lb"
             android:layout_width="wrap_content"

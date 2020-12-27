@@ -27,12 +27,14 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         /*
          explicitly enabling the toolbar here upon calling the onCreate method for presenting the cancelling button here
          */
         toolbarAdd.title = title
         setSupportActionBar(toolbarAdd)
         info("FIT-X-LOGGER App Activity started..")
+
 
         app = application as MainApp
 
@@ -89,7 +91,6 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
 
 
 
-
     //inflating the menu after cancel button is enabled
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
@@ -97,6 +98,7 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
             R.id.item_delete -> {
                 app.empDatas.delete(empData)
                 finish()
+
             }
 
             R.id.item_cancel -> {

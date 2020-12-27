@@ -49,6 +49,7 @@ class EmployeeListActivity : AppCompatActivity(), EmployeeDataListener {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.item_add -> startActivityForResult<MainActivity>(0)
+
         }
         return super.onOptionsItemSelected(item)
     }
@@ -59,7 +60,6 @@ class EmployeeListActivity : AppCompatActivity(), EmployeeDataListener {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         loadEmployeeData()
-        //recyclerView.adapter?.notifyDataSetChanged()
         super.onActivityResult(requestCode, resultCode, data)
     }
 }
