@@ -55,7 +55,7 @@ class EmployeeListActivity : AppCompatActivity(), EmployeeDataListener {
     }
 
     override fun onEmployeeDataClick(empData: EmployeeModel) {
-        startActivityForResult(intentFor<MainActivity>().putExtra("Employee_data_edit", empData), AppCompatActivity.RESULT_OK)
+        startActivityForResult(intentFor<MainActivity>().putExtra("Employee_data_edit", empData), 0)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

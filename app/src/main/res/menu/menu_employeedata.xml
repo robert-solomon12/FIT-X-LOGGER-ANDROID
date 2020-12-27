@@ -4,12 +4,14 @@
 
     <item
         android:id="@+id/item_delete"
+        android:icon="@android:drawable/ic_menu_delete"
         android:title="@string/deleteEmployeeDataIcon"
         android:visible="false"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/item_cancel"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
         android:title="@string/canelEmployeeDataIcon"
         app:showAsAction="always"/>
 

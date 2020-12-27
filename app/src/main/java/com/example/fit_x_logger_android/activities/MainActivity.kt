@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
             setResult(AppCompatActivity.RESULT_OK)
             finish()
         }
-            //event handler for Image
+        //event handler for Image
         chooseImage.setOnClickListener {
             showImagePicker(this, IMAGE_REQUEST)
         }
