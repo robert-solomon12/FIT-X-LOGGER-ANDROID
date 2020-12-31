@@ -13,7 +13,7 @@
             android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
+            android:background="@color/blue"
             android:fitsSystemWindows="true"
             app:elevation="0dip"
             app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
@@ -38,11 +38,12 @@
 
                 <TextView
                     android:id="@+id/id_Header"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Enter Employee Details"
-                    android:textSize="35sp"/>
-
+                    android:textSize="30sp"
+                    android:textAlignment="center"
+                    />
 
                 <EditText
                     android:id="@+id/empName"
@@ -51,19 +52,21 @@
                     android:layout_margin="8dp"
                     android:autofillHints=""
                     android:hint="@string/hint_Name"
+                    android:textAlignment="center"
                     android:inputType="text"
                     android:maxLength="20"
                     android:maxLines="1"
                     android:padding="8dp"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:background="@drawable/edit_bg"/>
 
                 <Button
                     android:id="@+id/btn_pick_date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
-                    android:background="@color/colorAccent"
+                    android:background="@drawable/btn_bg"
                     android:paddingBottom="8dp"
                     android:paddingTop="8dp"
                     android:text="@string/getDate_Btn"
@@ -73,16 +76,20 @@
                 <TextView
                     android:id="@+id/empDateOfB"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="@string/hint_dateOfB"
+                    android:padding="8dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:background="@drawable/textview_border"
                     android:layout_margin="13dp" />
-
 
                 <EditText
                     android:id="@+id/empEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
+                    android:layout_margin="8dp"
+                    android:textAlignment="center"
                     android:autofillHints=""
                     android:hint="@string/hint_email"
                     android:inputType="text"
@@ -90,7 +97,8 @@
                     android:maxLines="1"
                     android:padding="8dp"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:background="@drawable/edit_bg"/>
 
                 <EditText
                     android:id="@+id/empGender"
@@ -101,10 +109,12 @@
                     android:hint="@string/hint_gender"
                     android:inputType="text"
                     android:maxLength="25"
+                    android:textAlignment="center"
                     android:maxLines="1"
                     android:padding="8dp"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:background="@drawable/edit_bg"/>
 
                 <EditText
                     android:id="@+id/empSsNumber"
@@ -114,11 +124,13 @@
                     android:autofillHints=""
                     android:hint="@string/hint_ssNumber"
                     android:inputType="text"
+                    android:textAlignment="center"
                     android:maxLength="10"
                     android:maxLines="1"
                     android:padding="8dp"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:background="@drawable/edit_bg"/>
 
                 <EditText
                     android:id="@+id/empNationality"
@@ -130,9 +142,11 @@
                     android:inputType="text"
                     android:maxLength="15"
                     android:maxLines="1"
+                    android:textAlignment="center"
                     android:padding="8dp"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:background="@drawable/edit_bg"/>
 
                 <EditText
                     android:id="@+id/empJobTitle"
@@ -143,9 +157,11 @@
                     android:inputType="text"
                     android:maxLength="15"
                     android:maxLines="1"
+                    android:textAlignment="center"
                     android:padding="8dp"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"
+                    android:background="@drawable/edit_bg"/>
 
 
                 <Button
@@ -153,12 +169,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
-                    android:background="@color/colorAccent"
+                    android:background="@drawable/btn_bg"
                     android:paddingBottom="8dp"
                     android:paddingTop="8dp"
                     android:text="@string/addImage_Btn"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="16sp"/>
+                    android:textSize="16sp"
+                    />
 
                 <ImageView
                     android:id="@+id/empDataImage"
@@ -166,13 +183,12 @@
                     android:layout_height="wrap_content"
                     app:srcCompat="@mipmap/ic_launcher"/>
 
-
                 <Button
                     android:id="@+id/btnAdd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
-                    android:background="@color/colorAccent"
+                    android:background="@drawable/btn_bg"
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp"
                     android:stateListAnimator="@null"
