@@ -1,10 +1,13 @@
 package com.example.fit_x_logger_android.activities
 
+import android.app.DatePickerDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.Toast
 import com.example.fit_x_logger_android.R
 import com.example.fit_x_logger_android.main.MainApp
 import com.example.fit_x_logger_android.models.EmployeeModel
@@ -15,6 +18,8 @@ import org.jetbrains.anko.toast
 import readImage
 import readImageFromPath
 import showImagePicker
+import java.text.SimpleDateFormat
+import java.util.*
 
 class MainActivity : AppCompatActivity(), AnkoLogger {
 
@@ -22,6 +27,7 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
     lateinit var app: MainApp
     val IMAGE_REQUEST = 1
     var edit = false
+    var formatDate = SimpleDateFormat("dd MMMM YYYY", Locale.ENGLISH)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,7 +49,11 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
             edit = true
             empData = intent.extras?.getParcelable<EmployeeModel>("Employee_data_edit")!!
             empName.setText(empData.name)
+
             empDateOfB.setText(empData.dateOfB)
+            if (empData.dateOfB != null) {
+                btn_pick_date.setText(R.string.getDate_Btn)
+            }
             empEmail.setText(empData.email)
             empGender.setText(empData.gender)
             empSsNumber.setText(empData.ssNumber)
@@ -81,6 +91,24 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
         chooseImage.setOnClickListener {
             showImagePicker(this, IMAGE_REQUEST)
         }
+
+        //event handler for DatePicker
+        btn_pick_date.setOnClickListener(View.OnClickListener {
+            val getDate = Calendar.getInstance()
+            val datePicker = DatePickerDialog(this,android.R.style.Theme_Holo_Light_Dialog_MinWidth,DatePickerDialog.OnDateSetListener { datePicker, i, i2, i3 ->
+                val selectDate = Calendar.getInstance()
+                selectDate.set(Calendar.YEAR,i)
+                selectDate.set(Calendar.MONTH,i2)
+                selectDate.set(Calendar.DAY_OF_MONTH,i3)
+                val date = formatDate.format(selectDate.time)
+                Toast.makeText(this,"The D.O.B. you entered is: " + date, Toast.LENGTH_SHORT).show()
+                empDateOfB.text=date
+
+            }, getDate.get(Calendar.YEAR), getDate.get(Calendar.MONTH),getDate.get(Calendar.DAY_OF_MONTH))
+            datePicker.show()
+
+        })
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
