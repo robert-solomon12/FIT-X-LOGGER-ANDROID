@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
     lateinit var app: MainApp
     val IMAGE_REQUEST = 1
     var edit = false
-    var formatDate = SimpleDateFormat("dd MMMM YYYY", Locale.ENGLISH)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
