@@ -39,6 +39,7 @@ class EmployeeDataAdapter constructor(private var empDatas: List<EmployeeModel>,
             itemView.jobTitleTv.text = empData.jobTitle
             itemView.heightTv.text = empData.height
             itemView.weightTv.text = empData.weight
+            itemView.typeTv.text = empData.result
             itemView.bmiTv.text = empData.bmi
 
             itemView.imageIcon.setImageBitmap(readImageFromPath(itemView.context, empData.profilePic))

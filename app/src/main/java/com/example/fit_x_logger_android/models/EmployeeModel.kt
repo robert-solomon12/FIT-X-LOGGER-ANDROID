@@ -17,6 +17,5 @@ data class EmployeeModel (
     var height: String = "",
     var weight: String = "",
     var bmi: String = "",
-    //add resulting description next
-//    var result: String = "",
+    var result: String = "",
     var profilePic: String = "") : Parcelable

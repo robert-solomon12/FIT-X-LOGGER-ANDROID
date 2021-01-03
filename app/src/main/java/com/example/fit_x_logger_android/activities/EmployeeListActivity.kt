@@ -37,7 +37,7 @@ class EmployeeListActivity : AppCompatActivity(), EmployeeDataListener {
 
         val layoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = layoutManager
-        //recyclerView.adapter = EmployeeDataAdapter(app.empDatas.findAll(), this)
+
         loadEmployeeData()
 
 
@@ -55,6 +55,56 @@ class EmployeeListActivity : AppCompatActivity(), EmployeeDataListener {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
 
+        val menuItem = menu!!.findItem(R.id.nav_search)
+
+
+        /*Condition Statement to check if the 'menuItem' is clicked
+         then changed to searchview
+         */
+        if (menuItem != null) {
+
+            val searchView =  menuItem.actionView as SearchView
+
+
+            //Listener for when user inputs Data
+            searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+                override fun onQueryTextSubmit(query: String?): Boolean {
+                    return true
+                }
+
+                override fun onQueryTextChange(newText: String?): Boolean {
+
+
+                    /*Condition statement to check if search view box is empty then clear the array list of models
+                     in recyclerview
+                     */
+                    if (newText!!.isNotEmpty()) {
+
+                        displayList.clear()
+                        val search = newText.toLowerCase(Locale.getDefault())
+                        arrayList.forEach{
+
+
+                            /*Condition statement to check for when user input of called 'name' of type string is lowercase and contains
+                             the characters of 'search' then add the existing model in the arraylist to the view'
+                             */
+                            if (it.name.toLowerCase(Locale.getDefault()).contains(search)){
+                                displayList.add(it)
+                            }
+                        }
+
+                        recyclerView.adapter!!.notifyDataSetChanged()
+                    }
+                    else {
+                        displayList.clear()
+                        displayList.addAll(arrayList)
+                        recyclerView.adapter!!.notifyDataSetChanged()
+                    }
+                    return true
+                }
+            })
+
+        }
         return super.onCreateOptionsMenu(menu)
     }
 

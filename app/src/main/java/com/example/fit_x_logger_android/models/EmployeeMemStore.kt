@@ -36,6 +36,7 @@ class EmployeeMemStore : EmployeeStore, AnkoLogger {
             foundEmpData.height = empData.height
             foundEmpData.weight = empData.weight
             foundEmpData.bmi = empData.bmi
+            foundEmpData.result = empData.result
             foundEmpData.profilePic = empData.profilePic
             logAll()
         }

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 
 import com.example.fit_x_logger_android.R
 import com.example.fit_x_logger_android.main.MainApp
@@ -56,6 +57,7 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
             empHeight.setText(empData.height)
             empWeight.setText(empData.weight)
             empBMI.setText(empData.bmi)
+            empFitRes.setText(empData.result)
             empDataImage.setImageBitmap(readImageFromPath(this, empData.profilePic))
             if (empData.profilePic != null) {
                 chooseImage.setText(R.string.change_image)
@@ -74,6 +76,8 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
             empData.height = empHeight.text.toString()
             empData.weight = empWeight.text.toString()
             empData.bmi = empBMI.text.toString()
+            empData.result = empFitRes.text.toString()
+
             if (empData.name.isEmpty()) {
                 toast(R.string.promptInvalid_Emp)
             } else {
@@ -94,7 +98,6 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
 
         btnCalBMI.setOnClickListener{
             calculateBMI()
-
         }
 
     }
@@ -109,16 +112,33 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
     //formula for calculating bmi
     private fun calculateBMI(){
         val w = Weight.text.toString().toFloat() //retrieving the weight value from the edit text and converting to float
-        //info ("Weight: $w")
+
         val h = Height.text.toString().toFloat() / 100 //getting the height value and converting it to a meter
-        //info ("Height: $h")
+
         val res = (w/h*h) //this is the basic formula to calculate for each Employee
-        //info ("Resulting BMI: $res")
-        result.text = "%.2f".format(res) //formatting the result to display only to decimal form
 
         //result is then finally displayed
+
+        result.text = "Your BMI is ${String.format("%.2f",res)} you are ${bmires(res)}"//formatting the result to display in decimal form
+
     }
 
+
+    //Basic Logic function to check for the validity of the result calculated.
+    private fun bmires(res:Float):String{
+        var ans=""
+        if(res<40){
+            ans="Underweight"
+        }else if(res>40 && res<64.9){
+            ans="Normal"
+        }else if(res>65 && res<100) {
+            ans = "Overweight"
+        }else{
+            ans="Obese"
+            }
+            return ans
+        ans
+        }
 
 
     //inflating the menu after cancel button is enabled
