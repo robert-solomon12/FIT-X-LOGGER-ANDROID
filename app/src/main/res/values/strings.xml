@@ -29,6 +29,8 @@
         <string name="deleteEmployeeDataIcon">Delete</string>
 
 
+        <string name="getDate_Btn"> Enter D.O.B. </string>
+
 
 
                 <!--Employee attribute string type fields-->
@@ -39,6 +41,11 @@
         <string name="hint_ssNumber">Social Security No.</string>
         <string name="hint_nationality">Nationality</string>
         <string name="hint_jobTitle">Job Title</string>
+        <string name="hint_height">Height (in cm)</string>
+        <string name="hint_weight">Weight (in kg)</string>
+        <string name="hint_bmi">BMI</string>
+        <string name="hint_res">Resulting Description</string>
+
 
 
 </resources>

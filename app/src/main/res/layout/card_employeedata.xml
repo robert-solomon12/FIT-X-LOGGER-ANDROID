@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="8dp">
+    android:layout_marginBottom="15dp">
 
 
     <RelativeLayout
@@ -17,7 +17,7 @@
             android:layout_height="120dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginRight="25dp"
+            android:layout_marginRight="20dp"
             android:layout_weight="1" />
 
 
@@ -153,6 +153,63 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/nationalityTv"
             android:layout_toRightOf="@+id/id_JobTitle_lb"
+            android:textSize="15sp" />
+
+        <!--Height Label-->
+
+        <TextView
+            android:id="@+id/id_height_lb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_JobTitle_lb"
+            android:layout_toRightOf="@+id/imageIcon"
+            android:text="Height (in cm): "
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/heightTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jobTitleTv"
+            android:layout_toRightOf="@+id/id_height_lb"
+            android:textSize="15sp" />
+
+        <!--Weight Label-->
+
+        <TextView
+            android:id="@+id/id_Weight_lb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_height_lb"
+            android:layout_toRightOf="@+id/imageIcon"
+            android:text="Weight (in kg): "
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/weightTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/heightTv"
+            android:layout_toRightOf="@+id/id_Weight_lb"
+            android:textSize="15sp" />
+
+        <!--BMI Label-->
+
+        <TextView
+            android:id="@+id/id_BMI_lb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_Weight_lb"
+            android:layout_toRightOf="@+id/imageIcon"
+            android:text="BMI: "
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/bmiTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/weightTv"
+            android:layout_toRightOf="@+id/id_BMI_lb"
             android:textSize="15sp" />
 
     </RelativeLayout>

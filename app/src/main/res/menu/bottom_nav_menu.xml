@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ic_users"
+        android:icon="@drawable/ic_users"
+        android:title="Users"/>
+
+    <item
+        android:id="@+id/ic_health_check"
+        android:icon="@drawable/ic_baseline_health_check"
+        android:title="Health Check"/>
+
+    <item
+        android:id="@+id/ic_feedback"
+        android:icon="@drawable/ic_baseline_feedback"
+        android:title="Feedback"/>
+
+    <!--    Maybe include Rate Us or Share feature?-->
+
+</menu>

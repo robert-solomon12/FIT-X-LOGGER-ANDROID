@@ -1,10 +1,12 @@
 package com.example.fit_x_logger_android.activities
 
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+
 import com.example.fit_x_logger_android.R
 import com.example.fit_x_logger_android.main.MainApp
 import com.example.fit_x_logger_android.models.EmployeeModel
@@ -22,6 +24,7 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
     lateinit var app: MainApp
     val IMAGE_REQUEST = 1
     var edit = false
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,12 +46,16 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
             edit = true
             empData = intent.extras?.getParcelable<EmployeeModel>("Employee_data_edit")!!
             empName.setText(empData.name)
+
             empDateOfB.setText(empData.dateOfB)
             empEmail.setText(empData.email)
             empGender.setText(empData.gender)
             empSsNumber.setText(empData.ssNumber)
             empNationality.setText(empData.nationality)
             empJobTitle.setText(empData.jobTitle)
+            empHeight.setText(empData.height)
+            empWeight.setText(empData.weight)
+            empBMI.setText(empData.bmi)
             empDataImage.setImageBitmap(readImageFromPath(this, empData.profilePic))
             if (empData.profilePic != null) {
                 chooseImage.setText(R.string.change_image)
@@ -64,6 +71,9 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
             empData.ssNumber = empSsNumber.text.toString()
             empData.nationality = empNationality.text.toString()
             empData.jobTitle = empJobTitle.text.toString()
+            empData.height = empHeight.text.toString()
+            empData.weight = empWeight.text.toString()
+            empData.bmi = empBMI.text.toString()
             if (empData.name.isEmpty()) {
                 toast(R.string.promptInvalid_Emp)
             } else {
@@ -81,12 +91,32 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
         chooseImage.setOnClickListener {
             showImagePicker(this, IMAGE_REQUEST)
         }
+
+        btnCalBMI.setOnClickListener{
+            calculateBMI()
+
+        }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_employeedata, menu)
         if (edit && menu != null) menu.getItem(0).setVisible(true)
         return super.onCreateOptionsMenu(menu)
+    }
+
+
+    //formula for calculating bmi
+    private fun calculateBMI(){
+        val w = Weight.text.toString().toFloat() //retrieving the weight value from the edit text and converting to float
+        //info ("Weight: $w")
+        val h = Height.text.toString().toFloat() / 100 //getting the height value and converting it to a meter
+        //info ("Height: $h")
+        val res = (w/h*h) //this is the basic formula to calculate for each Employee
+        //info ("Resulting BMI: $res")
+        result.text = "%.2f".format(res) //formatting the result to display only to decimal form
+
+        //result is then finally displayed
     }
 
 

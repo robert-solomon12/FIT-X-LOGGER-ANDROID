@@ -37,6 +37,10 @@ class EmployeeDataAdapter constructor(private var empDatas: List<EmployeeModel>,
             itemView.ssNumberTv.text = empData.ssNumber
             itemView.nationalityTv.text = empData.nationality
             itemView.jobTitleTv.text = empData.jobTitle
+            itemView.heightTv.text = empData.height
+            itemView.weightTv.text = empData.weight
+            itemView.bmiTv.text = empData.bmi
+
             itemView.imageIcon.setImageBitmap(readImageFromPath(itemView.context, empData.profilePic))
 
             itemView.setOnClickListener { listener.onEmployeeDataClick(empData) }
