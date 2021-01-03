@@ -1,10 +1,13 @@
 package com.example.fit_x_logger_android.activities
 
+import android.app.DatePickerDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.Toast
 import com.example.fit_x_logger_android.R
 import com.example.fit_x_logger_android.main.MainApp
 import com.example.fit_x_logger_android.models.EmployeeModel
@@ -15,6 +18,8 @@ import org.jetbrains.anko.toast
 import readImage
 import readImageFromPath
 import showImagePicker
+import java.text.SimpleDateFormat
+import java.util.*
 
 class MainActivity : AppCompatActivity(), AnkoLogger {
 
@@ -43,6 +48,7 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
             edit = true
             empData = intent.extras?.getParcelable<EmployeeModel>("Employee_data_edit")!!
             empName.setText(empData.name)
+
             empDateOfB.setText(empData.dateOfB)
             empEmail.setText(empData.email)
             empGender.setText(empData.gender)
@@ -81,6 +87,7 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
         chooseImage.setOnClickListener {
             showImagePicker(this, IMAGE_REQUEST)
         }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

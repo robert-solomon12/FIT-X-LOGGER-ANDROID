@@ -29,6 +29,8 @@
         <string name="deleteEmployeeDataIcon">Delete</string>
 
 
+        <string name="getDate_Btn"> Enter D.O.B. </string>
+
 
 
                 <!--Employee attribute string type fields-->
