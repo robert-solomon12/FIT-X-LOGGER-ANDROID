@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
         /*
          explicitly enabling the toolbar here upon calling the onCreate method for presenting the cancelling button here
          */
-        toolbarAdd.title = title
+        toolbarAdd.title
         setSupportActionBar(toolbarAdd)
         info("FIT-X-LOGGER App Activity started..")
 
@@ -126,7 +126,7 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
 
     //Basic Logic function to check for the validity of the result calculated.
     private fun bmires(res:Float):String{
-        var ans=""
+        var ans: String
         if(res<40){
             ans="Underweight"
         }else if(res>40 && res<64.9){
@@ -137,7 +137,6 @@ class MainActivity : AppCompatActivity(), AnkoLogger {
             ans="Obese"
             }
             return ans
-        ans
         }
 
 

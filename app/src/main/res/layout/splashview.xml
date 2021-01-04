@@ -22,6 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+            <!--    Image Logo-->
     <ImageView
         android:id="@+id/img_logo"
         android:layout_width="120dp"
@@ -35,6 +36,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias=".1" />
 
+
+            <!--    App Logo-->
     <TextView
         android:id="@+id/textLogo"
         android:layout_width="320dp"
@@ -47,6 +50,8 @@
         android:textSize="40dp"
         android:text="FIT-X-LOGGER ANDROID" />
 
+
+            <!--     App Slogan-->
     <TextView
         android:id="@+id/textSlogan"
         android:layout_width="320dp"

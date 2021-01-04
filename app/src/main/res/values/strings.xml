@@ -1,51 +1,49 @@
 <resources>
-        <string name="app_name">FIT-X-Logger-Android</string>
+    <string name="app_name">FIT-X-Logger-Android</string>
 
-                <!--        Buttons     -->
-        <string name="add_BtnEmp">Add Info</string>
-        <string name="save_Btn"> Save Info </string>
-        <string name="addImage_Btn"> Add Profile Picture</string>
+    <!--        Buttons     -->
+    <string name="add_BtnEmp">Add Info</string>
+    <string name="save_Btn"> Save Info </string>
+    <string name="addImage_Btn"> Add Profile Picture</string>
 
-                <!--          Image selector button           -->
-        <string name="select_image">Select Profile Picture</string>
+    <!--          Image selector button           -->
+    <string name="select_image">Select Profile Picture</string>
 
-        <string name="change_image">Change Profile Picture</string>
+    <string name="change_image">Change Profile Picture</string>
 
-                <!--        String prompts-->
-        <string name="promptInvalid_Emp">Please Enter valid Employee Data</string>
+    <!--        String prompts-->
+    <string name="promptInvalid_Emp">Please Enter valid Employee Data</string>
 
-        <string name="promptValid_Emp">Employee added!</string>
+    <string name="promptValid_Emp">Employee added!</string>
 
-        <string name="promptSaved_Emp">Employee saved!</string>
+    <string name="promptSaved_Emp">Employee saved!</string>
 
-                <!--            Add Icon        -->
-        <string name="addEmployeeDataIcon">Add</string>
+    <!--            Add Icon        -->
+    <string name="addEmployeeDataIcon">Add</string>
 
-                <!--           Cancel Icon      -->
-        <string name="canelEmployeeDataIcon">Cancel</string>
-
-
-                        <!--    Delete Icon-->
-        <string name="deleteEmployeeDataIcon">Delete</string>
+    <!--           Cancel Icon      -->
+    <string name="canelEmployeeDataIcon">Cancel</string>
 
 
-        <string name="getDate_Btn"> Enter D.O.B. </string>
+    <!--    Delete Icon-->
+    <string name="deleteEmployeeDataIcon">Delete</string>
 
 
-
-                <!--Employee attribute string type fields-->
-        <string name="hint_Name">Name</string>
-        <string name="hint_dateOfB">Date Of Birth</string>
-        <string name="hint_email">Email</string>
-        <string name="hint_gender">Gender</string>
-        <string name="hint_ssNumber">Social Security No.</string>
-        <string name="hint_nationality">Nationality</string>
-        <string name="hint_jobTitle">Job Title</string>
-        <string name="hint_height">Height (in cm)</string>
-        <string name="hint_weight">Weight (in kg)</string>
-        <string name="hint_bmi">BMI</string>
-        <string name="hint_res">Resulting Description</string>
+    <string name="getDate_Btn"> Enter D.O.B. </string>
 
 
+    <!--Employee attribute string type fields-->
+    <string name="hint_Name">Name</string>
+    <string name="hint_dateOfB">Date Of Birth</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_gender">Gender</string>
+    <string name="hint_ssNumber">Social Security No.</string>
+    <string name="hint_nationality">Nationality</string>
+    <string name="hint_jobTitle">Job Title</string>
+    <string name="hint_height">Height (in cm)</string>
+    <string name="hint_weight">Weight (in kg)</string>
+    <string name="hint_bmi">BMI</string>
+    <string name="hint_res">Resulting Description</string>
+    <string name="userDetailsTitle">Enter Your Details</string>
 
 </resources>

@@ -32,7 +32,7 @@ class EmployeeListActivity : AppCompatActivity(), EmployeeDataListener {
 
         app = application as MainApp
 
-        toolbar.title = title
+        toolbar.title
         setSupportActionBar(toolbar)
 
         val layoutManager = LinearLayoutManager(this)
