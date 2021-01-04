@@ -2,6 +2,11 @@ package com.example.fit_x_logger_android.activities
 
 object UserInputTest {
 
+    /*
+    Author Robert Solomon
+    Student No.: 20079462
+  */
+
     private val existingUsers = listOf("Susan", "Robert")
 
     /**

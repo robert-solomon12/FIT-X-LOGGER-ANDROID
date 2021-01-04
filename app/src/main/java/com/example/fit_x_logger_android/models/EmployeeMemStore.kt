@@ -5,6 +5,11 @@ import org.jetbrains.anko.info
 
 var lastId = 0L
 
+/*
+    Author Robert Solomon
+    Student No.: 20079462
+  */
+
 internal fun getId(): Long {
     return lastId++
 }

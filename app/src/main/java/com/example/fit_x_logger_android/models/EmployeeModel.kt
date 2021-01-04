@@ -3,6 +3,10 @@ package com.example.fit_x_logger_android.models
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
+/*
+    Author Robert Solomon
+    Student No.: 20079462
+  */
 
 @Parcelize
 data class EmployeeModel (

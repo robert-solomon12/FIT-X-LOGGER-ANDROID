@@ -7,6 +7,12 @@ import com.example.fit_x_logger_android.models.EmployeeStore
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
 
+
+/*
+    Author Robert Solomon
+    Student No.: 20079462
+  */
+
 class MainApp : Application(), AnkoLogger {
 
     lateinit var empDatas: EmployeeStore

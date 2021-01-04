@@ -10,6 +10,11 @@ import com.google.gson.reflect.TypeToken
 import org.jetbrains.anko.AnkoLogger
 import java.util.*
 
+/*
+    Author Robert Solomon
+    Student No.: 20079462
+  */
+
 val JSON_FILE = "Employee DataList.json"
 val gsonBuilder = GsonBuilder().setPrettyPrinting().create()
 val listType = object : TypeToken<ArrayList<EmployeeModel>>() {}.type

@@ -9,6 +9,10 @@ import com.example.fit_x_logger_android.models.EmployeeModel
 import kotlinx.android.synthetic.main.card_employeedata.view.*
 import readImageFromPath
 
+/*
+    Author Robert Solomon
+    Student No.: 20079462
+  */
 interface EmployeeDataListener {
     fun onEmployeeDataClick(empData: EmployeeModel)
 }

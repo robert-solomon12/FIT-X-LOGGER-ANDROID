@@ -1,6 +1,11 @@
 package com.example.fit_x_logger_android.activities
 
 
+
+ /*
+    Author Robert Solomon
+    Student No.: 20079462
+  */
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -18,6 +23,11 @@ import org.jetbrains.anko.toast
 import readImage
 import readImageFromPath
 import showImagePicker
+
+/*
+    Author Robert Solomon
+    Student No.: 20079462
+  */
 
 class MainActivity : AppCompatActivity(), AnkoLogger {
 

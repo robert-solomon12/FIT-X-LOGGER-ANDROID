@@ -8,6 +8,12 @@ import android.net.Uri
 import com.example.fit_x_logger_android.R
 import java.io.IOException
 
+
+/*
+    Author Robert Solomon
+    Student No.: 20079462
+  */
+
 fun showImagePicker(parent: Activity, id: Int) {
     val intent = Intent()
     intent.type = "image/*"

@@ -37,18 +37,18 @@
         app:layout_constraintVertical_bias=".1" />
 
 
-            <!--    App Logo-->
+            <!--    App Logo    -->
     <TextView
         android:id="@+id/textLogo"
         android:layout_width="320dp"
         android:layout_height="100dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="220dp"
+        android:fontFamily="@font/black_ops_one"
+        android:text="FIT-X-LOGGER ANDROID"
         android:textAlignment="center"
         android:textColor="@color/red"
-        android:fontFamily="@font/black_ops_one"
-        android:textSize="40dp"
-        android:text="FIT-X-LOGGER ANDROID" />
+        android:textSize="40dp" />
 
 
             <!--     App Slogan-->
@@ -63,4 +63,32 @@
         android:fontFamily="@font/black_ops_one"
         android:textSize="20dp"
         android:text="Keeping yourself in check" />
+
+
+
+    <TextView
+        android:id="@+id/id_madeBy_lb"
+        android:layout_width="320dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="625dp"
+        android:textAlignment="center"
+        android:textColor="@color/red"
+        android:fontFamily="@font/black_ops_one"
+        android:textSize="20dp"
+        android:text="By" />
+
+
+                <!--    Author Label    -->
+    <TextView
+        android:id="@+id/authorName"
+        android:layout_width="320dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="650dp"
+        android:textAlignment="center"
+        android:textColor="@color/red"
+        android:fontFamily="@font/black_ops_one"
+        android:textSize="20dp"
+        android:text="Robert Solomon" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

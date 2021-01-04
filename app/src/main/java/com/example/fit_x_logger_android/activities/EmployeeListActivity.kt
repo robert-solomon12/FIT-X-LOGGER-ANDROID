@@ -15,6 +15,10 @@ import org.jetbrains.anko.startActivityForResult
 import java.util.*
 import kotlin.collections.ArrayList
 
+/*
+    Author Robert Solomon
+    Student No.: 20079462
+  */
 
 // Declaring the implemented interface in this class
 class EmployeeListActivity : AppCompatActivity(), EmployeeDataListener {
