@@ -21,7 +21,7 @@ class SplashActivity : AppCompatActivity() {
         //hide method to hide the top actionbar during the splashview
         supportActionBar?.hide()
 
-        //Handler for delaying the time period for the splashview before using the intent function to processing to the next view
+        //Handler for delaying the time period of 3000 milliseconds (3 seconds) for the splashview before using the intent function to processing to the next view
         Handler().postDelayed({
             val intent = Intent(this@SplashActivity, EmployeeListActivity::class.java)
             startActivity(intent)
