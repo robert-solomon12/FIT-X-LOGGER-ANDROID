@@ -1,5 +1,5 @@
 # FIT-X-Logger-Android
-A System Logging Android Application for Employees and Users to log their information. The idea of the App is to allow users of different companies (preferably a fitness company) to log their information while also calculating their BMI and store their information.
+A System Logging Android Application for Users to log their information. The idea of the App is to allow users a members working for a company who'd like to improve their health  to log their information while also calculating their BMI and store their information.
 
 ## Table_of_Contents
 * [Objectives](#objectives)
