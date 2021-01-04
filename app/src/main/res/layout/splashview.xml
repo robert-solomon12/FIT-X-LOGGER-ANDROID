@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.fit_x_logger_android.activities.SplashActivity"
+    android:background="@drawable/gradient_background">
+
+
+    <ImageView
+        android:id="@+id/img_Background"
+        android:layout_width="wrap_content"
+        android:layout_height="730dp"
+        android:src="@drawable/background_layout"
+        app:layout_constraintVertical_bias=".1"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="120dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/ic_dumbell_red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".1" />
+
+    <TextView
+        android:id="@+id/textLogo"
+        android:layout_width="320dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="220dp"
+        android:textAlignment="center"
+        android:textColor="@color/red"
+        android:fontFamily="@font/black_ops_one"
+        android:textSize="40dp"
+        android:text="FIT-X-LOGGER ANDROID" />
+
+    <TextView
+        android:id="@+id/textSlogan"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="330dp"
+        android:textAlignment="center"
+        android:textColor="@color/red"
+        android:fontFamily="@font/black_ops_one"
+        android:textSize="20dp"
+        android:text="Keeping yourself in check" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
