@@ -12,14 +12,12 @@ A System Logging Android Application for Users to log their information. The ide
  * Enable the User to Add, Update and Delete Data in this Application.
  * Persistence of Data when the Application is reloaded.
  * Support of viewing individual Data in the Applications (see version releases)
- * Allow the user to navigate menu options  via Console interface or something richer such as TornadoFX
-
 
 ## Features
-* Full C.R.U.D. Functionality (in console versions only, see releases)
-* Search/Filter (see version releases, but bugs esxists)
-* BMI Calculation while adding a user (see releases)
-* Splashview for user friendly introduction
+* Full C.R.U.D. Functionality (see version releases)
+* Search/Filter (attempts made, bugs esxists, see version releases)
+* BMI Calculation while adding a user (see version releases)
+* Splashscreen for user friendly introduction
 
  
  ## Future Updates
