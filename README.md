@@ -16,7 +16,7 @@ A System Logging Android Application for Users to log their information. The ide
 
 ## Features
 * Full C.R.U.D. Functionality (see version releases)
-* Search/Filter (attempts made, bugs esxists, see version releases)
+* Search/Filter (attempts made, bugs exists, see version releases)
 * BMI Calculation while adding a user (see version releases)
 * Splashscreen for user friendly introduction
 
