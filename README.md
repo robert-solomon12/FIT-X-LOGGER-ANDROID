@@ -5,7 +5,7 @@ A System Logging Android Application for Users to log their information. The ide
 ## Table_of_Contents
 * [Objectives](#objectives)
 * [Features](#features)
-* [Future Updates](#Future Updates)
+* [Future Updates](#Future_updates)
 * [Contact_Information](#contact_information)
 
 
@@ -21,7 +21,7 @@ A System Logging Android Application for Users to log their information. The ide
 * Splashscreen for user friendly introduction
 
  
- ## Future Updates
+ ## Future_Updates
  - In Progress for later releases in the future with further bug imrpovements and advance features.
  
 ## Contact_Information
