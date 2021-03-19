@@ -5,7 +5,7 @@ A System Logging Android Application for Users to log their information. The ide
 ## Table_of_Contents
 * [Objectives](#objectives)
 * [Features](#features)
-* [Future Updates](#status)
+* [Future Updates](#Future Updates)
 * [Contact_Information](#contact_information)
 
 
