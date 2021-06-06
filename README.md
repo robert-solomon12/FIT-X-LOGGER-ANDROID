@@ -25,5 +25,5 @@ A System Logging Android Application for Users to log their information. The ide
  - In Progress for later releases in the future with further bug imrpovements and advance features.
  
 ## Contact_Information
-<br> Should you have any problems, don't hesitate to contact me on my email at:</br> [20079462@mail.wit.ie](mailto:20079462@mail.wit.ie)
+<br> Should you have any problems, don't hesitate to contact me on my email at:</br> [robertsolomon12@outlook.com](mailto:robertsolomon12@outlook.com)
 <br>or if you find further bugs </br>[open up an issue here](https://github.com/robert-solomon12/FIT-X-LOGGER-ANDROID/issues)
